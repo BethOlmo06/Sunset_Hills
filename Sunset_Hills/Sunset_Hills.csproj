@@ -72,6 +72,7 @@
     <Content Include="CSS\cover.css" />
     <Content Include="CSS\prism.css" />
     <Content Include="code.html" />
+    <Content Include="IMG\sunset150.png" />
     <Content Include="solve.html" />
     <Content Include="index.html" />
     <Content Include="SCRIPTS\bootstrap.bundle.min.js" />
