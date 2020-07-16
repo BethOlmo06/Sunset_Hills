@@ -24,6 +24,10 @@ a:hover {
     color: white;
 }
 
+.elWide {
+    width: 100%;
+}
+
 
 /*
  * Base structure

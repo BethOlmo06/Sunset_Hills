@@ -40,10 +40,56 @@
                 <div class="row">
                     <div class="col-12">
                         <pre class="line-numbers language-js">
-                        <code class="language-js">
+                            <code class="language-js">$("#submit").on('click', function () { //Kick off a function when the Submit button is clicked.
 
-                    </code>
-                    </pre>
+                                //Get user inputs & assign them to variables.
+                                let height1 = parseInt($("#numIn1").val());
+                                let height2 = parseInt($("#numIn2").val());
+                                let height3 = parseInt($("#numIn3").val());
+                                let height4 = parseInt($("#numIn4").val());
+                                let height5 = parseInt($("#numIn5").val());
+                                let height6 = parseInt($("#numIn6").val());
+                                let height7 = parseInt($("#numIn7").val());
+
+                                //Collect user inputs into array.
+                                let heightsArray = [height1, height2, height3, height4, height5, height6, height7];
+
+                                /* The westernmost building will always see the sunset, so the
+                                * integer at index[0] is always included in results */
+                                let resultOut = new Array();
+                                resultOut.push(heightsArray[0]);
+
+                                let highest = 0;
+                                let currentHeight = 0;
+
+                                //Iterate over array to determine whether current integer is less than the previous one
+                                for (let index = 1; index <= heightsArray.length - 1; index++) {
+                                currentHeight = heightsArray[index];
+
+                                /*If the current integer is greater than the previous one,
+                                * add it to the results array.*/
+                                if (currentHeight > highest) {
+                                resultOut.push(currentHeight);
+                                highest = currentHeight;
+                                }
+
+                                //Print results
+                                $("#results").html(`The building(s) that can see the sunset are: <span>[${resultOut.toString()}]</span>.`);
+                                }
+                                });
+
+                                //Clear inputs and results
+                                $("#clear").on('click', function () {
+                                $("#numIn1").val("");
+                                $("#numIn2").val("");
+                                $("#numIn3").val("");
+                                $("#numIn4").val("");
+                                $("#numIn5").val("");
+                                $("#numIn6").val("");
+                                $("#numIn7").val("");
+                                $("#resultOut").val("");
+                            });</code>
+                        </pre>
                     </div>
                 </div>
             </div>
@@ -57,10 +103,12 @@
     </div>
 
 
+    <script src="SCRIPTS/jquery.js"></script>
     <script src="SCRIPTS/bootstrap.bundle.min.js"></script>
     <script src="SCRIPTS/bootstrap.min.js"></script>
-    <script src="SCRIPTS/jquery.js"></script>
     <script src="SCRIPTS/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script src="SCRIPTS/solve.js"></script>
 
 

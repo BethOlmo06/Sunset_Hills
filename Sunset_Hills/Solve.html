@@ -32,23 +32,77 @@
 
         <main role="main" class="inner cover">
             <div class="row">
-                <div class="col bg-light">
-                    <h2 class="text-black-50"> Enter some numbers</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
+                <div class="col mb-xl-5">
+                    <h2> Enter a whole number from 1 to 10 for each building height.</h2>
+                    <br />
 
                 </div>
-            </div>
+                <div class="row pb-5">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <input type="number" class="form-control" id="numIn1">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" id="numIn2">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" id="numIn3">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" id="numIn4">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" id="numIn5">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" id="numIn6">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" id="numIn7">
+                            </div>
+                        </div>
+                        <br />
+                        <div class="container">
+                            <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+                            <div class="row mb-xl-5">
+                                <div class="col-md-8">
+                                    <button type="button" class="btn btn-success btn-lg elWide" id="submit">Submit</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="btn btn-light btn-lg elWide" id="clear">Clear</button>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row mb-xl-5">
+                                <div class="col">
+                                    <h4 id="results"></h4>
+                                </div>
+                            </div>
 
-            <div class="row pt-xl-5">
-                <div class="col">
-                    <p class="lead">
-                        <a href="\code.html" class="btn btn-lg" id="btnCode">Want to see the code?</a>
-                    </p>
+                            <!--HERE'S WHERE THE COOL CHART DISPLAY WILL GO WHEN I FIGURE IT OUT-->
+                            <!--<div class="row mt-xl-5">
+        <div class="col">
+            <canvas id="myChart">
+
+            </canvas>
+        </div>
+    </div>-->
+
+
+
+                            <br />
+                            <div class="row mt-xl-5">
+                                <div class="col-md-4 offset-4">
+                                    <a class="btn btn-lg elWide" id="btnCode" href="\code.html" role="button">Check Out The Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
+
+
         </main>
 
         <footer class="mastfoot mt-auto">
@@ -59,10 +113,12 @@
     </div>
 
 
+    <script src="SCRIPTS/jquery.js"></script>
     <script src="SCRIPTS/bootstrap.bundle.min.js"></script>
     <script src="SCRIPTS/bootstrap.min.js"></script>
-    <script src="SCRIPTS/jquery.js"></script>
     <script src="SCRIPTS/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script src="SCRIPTS/solve.js"></script>
 
 
