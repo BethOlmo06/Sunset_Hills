@@ -89,9 +89,6 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
-.nav-item {
-    color: #fff;
-}
 
 @media (min-width: 48em) {
   .masthead-brand {
